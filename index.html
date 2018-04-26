@@ -9,13 +9,26 @@
 			<nav class="-site-navigation">
 				<a class="header-logo"><img src="img/logo.svg" alt="Логотип Gllasy"></a>
 				<ul>
-					<li><a href="#">Каталог</a></li>
+					<li>Каталог
+					<form action="http://echo.htmlacademy.ru" method="get">
+						<select class="catalog-popup" name="catalog-new">
+							<optgroup label="Новинки">
+								<ul>
+									<li><option value="milk">Сливочное</option></li>
+									<li><option value="sherbet">Щербеты</option></li>
+									<li><option value="ice">Фруктовый лед</option></li>
+									<li><option value="melorin">Мелорин</option></li>
+								</ul>
+							</optgroup>
+						</select>
+					</form>
+					</li>
 					<li><a href="#">Доставка и оплата</a></li>
 					<li><a href="#">О Компании</a></li>
 				</ul>
 			</nav>
 			<ul class="user-navigation">
-				<li><a href="#">Поиск</a></li>
+				<li><button class="search-btn" type="button">Поиск</button></li>
 				<li><a href="#">Вход</a></li>
 				<li class="cart"><a href="#">Корзина</a></li>
 			</ul>
@@ -26,8 +39,20 @@
 		<main class="container">
 			<h1>Магазин мороженого «Gllasy»</h1>
 
-			<div class="main-slider">
+			<div class="main-slider-1">
 				<h2>Крем-брюле и пломбир с малиновым джемом</h2>
+				<a href="#">Давайте оба!</a>
+				<img src="img/slider-btns" width="100" height="100" alt="Кнопки Слайдера">
+			</div>
+
+			<div class="main-slider-2">
+				<h2>Шоколадный пломбир и лимонный сорбет</h2>
+				<a href="#">Давайте оба!</a>
+				<img src="img/slider-btns" width="100" height="100" alt="Кнопки Слайдера">
+			</div>
+
+			<div class="main-slider-3">
+				<h2>Пломбир с помадкой и клубничный щербет</h2>
 				<a href="#">Давайте оба!</a>
 				<img src="img/slider-btns" width="100" height="100" alt="Кнопки Слайдера">
 			</div>
@@ -98,8 +123,10 @@
 			<section class="subscription">
 				<h2 class="visually-hidden">Электронная подписка</h2>
 				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-				<!-- Форма -->
-				<a class="btn" href="#">Отправить</a>
+				<form action="http://echo.htmlacademy.ru" method="post">
+					<input type="text" name="email" placeholder="Электронная почта" area-label="Электронная почта">
+					<button class="btn" type="submit">Отправить</button>
+				</form>
 			</section>
 
 			<section class="map">
@@ -136,7 +163,10 @@
 		</footer>
 
 		<section class="user-login">
-			<!-- Формы -->
+			<form action="http://echo.htmlacademy.ru" method="post">
+				<p><input type="text" name="email" placeholder="Электронная почта" aria-label="Электронная почта"></p>
+				<p><input type="password" name="password" placeholder="Пароль" aria-label="Пароль"></p>
+			</form>
 			<a class="btn" href="#">Войти</a>
 			<a href="#">Забыли пароль?</a>
 			<a href="#">Новая регистрация</a>
@@ -144,19 +174,29 @@
 
 		<section class="whrite-us">
 			<b>Мы обязательно вам ответим!</b>
-			<!-- Формы -->
-			<a class="btn" href="#">Отправить</a>
-			<a href="close-btn">Закрыть</a>
+			<form>
+				<p><input type="text" name="name" placeholder="Как вас зовут?" aria-label="Ваше имя"></p>
+				<p><input type="text" name="email" placeholder="Ваша почта для ответа?" aria-label="Ваш email"></p>
+				<p><textarea aria-label="Текст письма">Напишите что-нибудь...</textarea></p>
+				<button class="btn" type="submit">Отправить</button>
+			</form>
+			<button class="close-btn" type="button">Закрыть</button>
 		</section>
 
 		<section class="catalog-list">
 			<ul>
-				<li>Новинки</li>
-				<li>Сливочное</li>
-				<li class="catalog-current">Щербеты</li>
-				<li>Фруктовый лед</li>
-				<li>Мелорин</li>
+				<li><a href="#">Новинки</a></li>
+				<li><a href="#">Сливочное</a></li>
+				<li class="catalog-current"><a href="#">Щербеты</a></li>
+				<li><a href="#">Фруктовый лед</a></li>
+				<li><a href="#">Мелорин</a></li>
 			</ul>
+		</section>
+
+		<section class="search-form">
+			<form action="http://echo.htmlacademy.ru" method="get">
+				<input type="search" name="search" placeholder="Что ищем?">
+			</form>
 		</section>
 
 	</body>

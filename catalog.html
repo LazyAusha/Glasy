@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-	<html lang="ru">
+<html lang="ru">
 	<head>
 		<meta charset="utf-8">
 		<title>Каталог мороженого «Gllasy»</title>
@@ -15,7 +15,7 @@
 				</ul>
 			</nav>
 			<ul class="user-navigation">
-				<li><a href="#">Поиск</a></li>
+				<li><button class="search-btn" type="button">Поиск</button></li>
 				<li><a href="#">Вход</a></li>
 				<li class="cart"><a href="#">Корзина</a></li>
 			</ul>
@@ -31,12 +31,42 @@
 					<li><a href="index.html">Главная</a></li>
 					<li><a href="#">Каталог</a></li>
 					<li><a class="breadcrumbs-current">Сливочное</a></li>
-					<li></li>
 				</ul>
 			</section>
 
 			<section class="filter">
-				<!-- Формы -->
+				<h2 class="visually-hidden">Сортировка товаров</h2>
+				<form action="http://echo.htmlacademy.ru" method="post">
+					<fieldset>
+						<legend>Сортировка:</legend>
+						<select name="sort">
+							<option value="popular" selected>по популярности</option>
+							<option value="expansive">сначала недорогие</option>
+							<option value="cheap">сначала дорогие</option>
+							<option value="fatness">по жирности</option>
+						</select>
+					</fieldset>
+					<fieldset>
+						<legend>Цена: 100 руб. – 500 руб.</legend>
+						<input type="range" name="price">
+					</fieldset>
+					<fieldset>
+						<legend>Жирность:</legend>
+						<label><input type="radio" name="0%">0%</label>
+						<label><input type="radio" name="10%" checked>до 10%</label>
+						<label><input type="radio" name="30%">до 30%</label>
+						<label><input type="radio" name="30%-up">выше 30%</label>
+					</fieldset>
+					<fieldset>
+						<legend>Наполнители:</legend>
+						<label><input type="checkbox" name="topings" checked>шоколадные</label>
+						<label><input type="checkbox" name="topings" checked>сахарные присыпки</label>
+						<label><input type="checkbox" name="topings">фрукты</label>
+						<label><input type="checkbox" name="topings">сиропы</label>
+						<label><input type="checkbox" name="topings">джемы</label>
+					</fieldset>
+					<button class="btn" type="submit">Применить</button>
+				</form>
 			</section>
 
 			<section class="catalog">
